@@ -1,0 +1,33 @@
+<!-- #003ecb -->
+<!--  #0057ff-->
+<div class="main">
+
+    <div class="card">
+
+        <h1>Hello!Welcome back</h1>
+        <form action="" [formGroup]="loginForm" (ngSubmit)="loginForm.valid&&onLogIn()">
+            
+            <div class="input-tag">
+                <span><i class='bx bxs-envelope bx-sm'></i></span><input type="email"
+                    placeholder="Enter your email address" formControlName="email">
+            </div>
+
+            <div class="input-tag"><span><i class='bx bxs-lock-alt bx-sm'></i></span> <input type="password"
+                    placeholder="••••••••••••••••••••••••••••" formControlName="password">
+            </div>
+
+            <div class="button-signin">
+                <button type="submit">Login</button>
+            </div>
+
+            <div class="notauseryet">
+                <span>Dont have an account?<span class="click" (click)="SignUp()">Create Account</span></span>
+            </div>
+
+            <!-- <p>{{error_msg}}</p> -->
+
+        </form>
+
+    </div>
+
+</div>

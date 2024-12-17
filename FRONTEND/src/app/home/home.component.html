@@ -1,0 +1,43 @@
+<section>
+    <div class="post">
+        @for(blog of all_Blogs;track all_Blogs;let i=$index){
+
+        <div class="item" (click)="blogView(blog._id)">
+
+
+            <div class="image">
+                <img src="data:{{blog.extention}};base64,{{blog.image}}" alt="home img">
+            </div>
+            <h5>#{{blog.category}}</h5>
+            <h3>{{blog.title}}</h3>
+            <span>{{blog.date | date}}</span>
+            <p>{{blog.body | slice}}...</p>
+            <div class="profile">
+
+                <div class="pf-profile">
+                    <div class="pf-img">
+                        <img src="data:{{blog.authors.extention}};base64,{{blog.authors.user_profile}}" alt="">
+                    </div>
+                    <div class="username">
+                        <span class="name">{{blog.authors.username}} </span>
+                    </div>
+                </div>
+
+                <div class="like-cmnt">
+                    <p><span class="cmnt"><i class='bx bx-comment'></i></span>{{blog.blog_comments.length}}
+                        <span class="like"><i class='bx bx-heart'></i></span>{{blog.likes.length}}
+                    </p>
+                </div>
+
+            </div>
+
+
+        </div>
+        }
+        @empty{
+        <!-- <div class="err-msg">
+       <h3>{{erorr_message}}</h3>
+       </div> -->
+        }
+    </div>
+</section>

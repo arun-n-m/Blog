@@ -1,0 +1,88 @@
+/* dddfe2,FFFFFF  */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .card {
+    margin: 4% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: max(500px);
+    background-color: #e6e6ec;
+    height: max(600px);
+    border-radius: 4px;
+}
+
+.main .card h1 {
+    font-size: x-large;
+    font-weight: 700;
+    user-select:none;
+}
+
+.main .card .input-tag,
+.button-signin {
+    display: flex;
+    align-items: center;
+    padding-top: 25px;
+}
+
+.button-signin button {
+    margin-left: 22px;
+    background-color: #1877f2;
+    font-size: larger;
+    font-weight: 500;
+    color:#fff;
+}
+
+.button-signin button:hover{
+    background-color: #297be7;
+}
+
+.main .card .input-tag input[type='email'],
+.main .card .input-tag input[type='password'],
+.button-signin button {
+    width: max(380px);
+    height: max(43px);
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    margin-top: 10px;
+}
+.main .card .input-tag input[type='email'],
+.main .card .input-tag input[type='password']{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.main .card .input-tag input[type='email']::-webkit-input-placeholder,
+.main .card .input-tag input[type='password']::-webkit-input-placeholder {
+    padding-left: 1px
+    
+}
+
+.main .card .input-tag input[type='email']::content,
+.main .card .input-tag input[type='password']::content {
+    padding-left: 40px;
+}
+
+.main .card .input-tag span {
+    position: relative;
+    left: 29px;
+    top: 6px;
+
+}
+
+.main .card .input-tag span i {
+    color: #297be7;
+}
+.notauseryet{
+    margin-top: 29px;
+   text-align: center;
+}
+.notauseryet .click{
+    color: #1877f2;
+    cursor: pointer;
+}

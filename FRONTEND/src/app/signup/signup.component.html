@@ -1,0 +1,31 @@
+<div class="main">
+  <div class="card">
+    <h1>Create Account</h1>
+    <form action="" [formGroup]="signup" (ngSubmit)="signup.valid&&onSignup()">
+     <div class="profile-img">
+      <div class="profile">
+          <img [src]="signup_img" alt="signup_img-error">
+          <input type="file" (change)="upload($event)">
+      </div>
+    </div>
+
+    
+        <div class="input-tag"> <span><i class='bx bxs-user-plus bx-sm'></i></span><input type="text"
+            placeholder="Username" formControlName="username" required></div>
+        <div class="input-tag"><span><i class='bx bxs-envelope bx-sm'></i></span><input type="email" placeholder="Email"
+            formControlName="email" required></div>
+        <div class="input-tag"><span><i class='bx bxs-lock-alt bx-sm'></i></span> <input type="password"
+            placeholder="Password" formControlName="password" required></div>
+
+            <div class="button-signin">
+              <button type="submit">Signup</button>
+          </div>
+
+      <div class="notauseryet">
+        <span>Already a user ?<span class="click" (click)="loginClick()">Login</span></span>
+      </div>
+      <!-- <p>{{error_msg}}</p> -->
+
+    </form>
+  </div>
+</div>

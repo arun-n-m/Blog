@@ -1,0 +1,41 @@
+<nav>
+  <h2 class="logo" (click)="logoClick()">Blogs</h2>
+  <ul>
+    <li><a href="/home">Home</a></li>
+    <li><a href="/home/myblogs">Myblogs</a></li>
+  </ul>
+
+  <button (click)="pfClicked()"><img [src]="signup_img" alt="Profile_img_error">
+  </button>
+
+  <div class="sub-menu-wrap"  [class]=" pf_click?open:''">
+
+    <div class="sub-menu">
+      <div class="user">
+        <img [src]="signup_img">
+        <h3>ajith nm</h3>
+      </div>
+      <hr>
+      <a href="" class="sub-menu-link">
+        <i class='bx bxs-user bx-sm'></i>
+        <p>Edit Profile</p>
+        <span><i class='bx bx-chevron-right'></i></span>
+      </a>
+      <a href="/home/create" class="sub-menu-link">
+        <i class='bx bxs-file-plus bx-sm'></i>
+        <p>Create</p>
+        <span><i class='bx bx-chevron-right'></i></span>
+      </a>
+      <a href="" class="sub-menu-link">
+        <i class='bx bxs-log-out bx-sm'></i>
+        <p>Logout</p>
+        <span><i class='bx bx-chevron-right'></i></span>
+      </a>
+    </div>
+
+  </div>
+</nav>
+
+<section>
+  <router-outlet></router-outlet>
+</section>

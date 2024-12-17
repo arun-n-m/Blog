@@ -1,0 +1,120 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .card {
+    margin: 4% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: max(500px);
+    background-color: #e6e6ec;
+    height: max(600px);
+    border-radius: 4px;
+}
+
+.main .card h1 {
+    font-size: x-large;
+    font-weight: 700;
+    user-select:none;
+}
+.profile-img{
+    display: flex;
+    justify-content: center;
+    margin-top: 17px;
+}
+.main .card .profile{
+    position: relative;
+    width:max(110px);
+    height:max(110px);
+    border-radius: 50%;
+    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.main .card .profile img{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    object-fit: cover;   
+}
+
+.main .card .profile input{
+    position: absolute;
+    font-size:160px;
+    opacity:0;
+}
+
+.main .card .input-tag,
+.button-signin {
+    display: flex;
+    align-items: center;
+    padding-top: 25px;
+}
+
+.button-signin button {
+    margin-left: 22px;
+    background-color: #1877f2;
+    font-size: larger;
+    font-weight: 500;
+    color:#fff;
+}
+
+.button-signin button:hover{
+    background-color: #297be7;
+}
+
+.main .card .input-tag input[type='email'],
+.main .card .input-tag input[type='password'],
+.main .card .input-tag input[type='text'],
+.button-signin button {
+    width: max(380px);
+    height: max(43px);
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    margin-top: 10px;
+}
+.main .card .input-tag input[type='email'],
+.main .card .input-tag input[type='password'],
+.main .card .input-tag input[type='text']{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.main .card .input-tag input[type='email']::-webkit-input-placeholder,
+.main .card .input-tag input[type='password']::-webkit-input-placeholder,
+.main .card .input-tag input[type='text']::-webkit-input-placeholder {
+    padding-left: 1px
+    
+}
+
+.main .card .input-tag input[type='email']::content,
+.main .card .input-tag input[type='password']::content,
+.main .card .input-tag input[type='text']::content {
+    padding-left: 40px;
+}
+
+
+.main .card .input-tag span {
+    position: relative;
+    left: 29px;
+    top: 6px;
+
+}
+
+.main .card .input-tag span i {
+    color: #297be7;
+}
+.notauseryet{
+    margin-top: 29px;
+   text-align: center;
+}
+.notauseryet .click{
+    color: #1877f2;
+    cursor: pointer;
+}

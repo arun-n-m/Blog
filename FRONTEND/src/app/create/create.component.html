@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="card">
+        <h1>Create Blog</h1>
+        <form action="" #creationform="ngForm" (ngSubmit)="creationform.valid&&onSubmit()">
+            <div class="input-card">
+                <div class="image"><span><i class='bx bxs-image-add bx-lg'></i></span>
+                    <input type="file" (change)="upload($event)" required>
+                </div>
+                @if(creationform.submitted&&['required']){
+                <p style="color:rgb(246, 41, 41);">image required..</p>
+                }
+
+                <div class="category">
+                    <select id="select" (change)="selectBox(data)" #data> <option>select</option>
+                        @for(category of categorys;track category;let indx=$index){<option>{{category.value}}</option>}
+                    </select>
+                </div>
+
+                <div class="title"><span> Title:</span>
+                    <input type="text" [(ngModel)]="creationForm.title" #title="ngModel" name="title" required>
+                    @if(creationform.submitted&&title.errors?.['required']){
+                    <p style="color:rgb(246, 41, 41);">title is required..</p>
+                    }
+                </div>
+                
+                <div class="content"> <span> Content: </span>
+                    <textarea cols="" rows="" [(ngModel)]="creationForm.content" #content="ngModel" name="content"
+                        required></textarea>
+                    @if(creationform.submitted&&content.errors?.['required']){
+                    <p style="color:rgb(246, 41, 41);">content is required..</p>
+                    }
+                </div>
+                <div class="button-submit">
+                    <button type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
